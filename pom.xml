@@ -39,7 +39,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.connect.DbConnection</mainClass>
+							<mainClass>com.players.app.App</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
