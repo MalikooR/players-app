@@ -1,0 +1,52 @@
+CREATE DATABASE `playersdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE USER 'juser'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'juser'@'%';
+FLUSH PRIVILEGES;
+
+USE playersdb;
+
+CREATE TABLE `players` (
+  `id` int DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `team` varchar(255) DEFAULT NULL,
+  `position` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `playersdb`.`players`
+(`id`,
+`lastname`,
+`firstname`,
+`team`,
+`position`)
+VALUES
+(1,
+'Ryad',
+'Boudebouz',
+'Algeria',
+'RW'),
+(2,
+'Manuel',
+'Ruicosta',
+'Portugal',
+'CM'),
+(3,
+'Fernando',
+'Redondo',
+'Argentina',
+'DM'),
+(4,
+'Ricardo',
+'Kaka',
+'Brazil',
+'CM'),
+(5,
+'Ronaldo',
+'TheOnlyRonaldo',
+'Brazil',
+'CF'),
+(6,
+'Paolo',
+'Maldini',
+'Italy',
+'CB');
